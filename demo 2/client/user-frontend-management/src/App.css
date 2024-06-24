@@ -1,31 +1,24 @@
+/* General Styles */
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
+/* Logo Animation */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  transition: transform 0.2s;
+}
+
+.App-logo:hover {
+  transform: scale(1.1);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +28,103 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #1e1e2f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f8f8ff;
+  padding: 20px;
+}
+
+.App-header h1 {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Link Styles */
+.App-link {
+  color: #ff6f61;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.App-link:hover,
+.App-link:focus {
+  color: #ff4b47;
+  border-bottom: 2px solid #ff4b47;
+}
+
+/* Main Content Styles */
+.App-main {
+  background-color: #2e2e4d;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+/* Button Styles */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+button:focus {
+  background-color: #ff4b47;
+}
+
+/* Form Styles */
+input, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff6f61;
+  outline: none;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
 }
