@@ -23,7 +23,18 @@ public class CustomerAccount {
 
     public CustomerAccount() {}
 
-    public CustomerAccount(String username, String password, String email) {
+//    public CustomerAccount(String username, String password, String email) {
+//        this.username = username;
+//        this.password = password;
+//        this.email = email;
+//    }
+
+
+    public CustomerAccount(String name, Date dob, long phoneNum, String address, String username, String password, String email) {
+        this.name = name;
+        this.dob = dob;
+        this.phoneNum = phoneNum;
+        this.address = address;
         this.username = username;
         this.password = password;
         this.email = email;
