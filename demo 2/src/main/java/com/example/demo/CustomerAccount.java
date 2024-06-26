@@ -14,7 +14,7 @@ public class CustomerAccount {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Date dob;
+    private String dob;
     private long phoneNum;
     private String address;
     private String username;
@@ -30,7 +30,8 @@ public class CustomerAccount {
 //    }
 
 
-    public CustomerAccount(String name, Date dob, long phoneNum, String address, String username, String password, String email) {
+    public CustomerAccount(Long id, String name, String dob, long phoneNum, String address, String username, String password, String email) {
+        this.id = id;
         this.name = name;
         this.dob = dob;
         this.phoneNum = phoneNum;
@@ -57,11 +58,11 @@ public class CustomerAccount {
         this.name = name;
     }
 
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 
