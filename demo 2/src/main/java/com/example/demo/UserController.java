@@ -5,7 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,27 +20,27 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<List<UserAccount>> getAllUsers() {
-        List<UserAccount> users = userService.getAllUsers();
+    public ResponseEntity<List<CustomerAccount>> getAllUsers() {
+        List<CustomerAccount> users = userService.getAllUsers();
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserAccount> getUserById(@PathVariable("id") Long id) {
-        Optional<UserAccount> user = userService.getUserById(id);
+    public ResponseEntity<CustomerAccount> getUserById(@PathVariable("id") Long id) {
+        Optional<CustomerAccount> user = userService.getUserById(id);
         return user.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public ResponseEntity<UserAccount> createUser(@RequestBody UserAccount user) {
-        UserAccount createdUser = userService.createUser(user);
+    public ResponseEntity<CustomerAccount> createUser(@RequestBody CustomerAccount user) {
+        CustomerAccount createdUser = userService.createUser(user);
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UserAccount> updateUser(@PathVariable("id") Long id, @RequestBody UserAccount userDetails) {
-        UserAccount updatedUser = userService.updateUser(id, userDetails);
+    public ResponseEntity<CustomerAccount> updateUser(@PathVariable("id") Long id, @RequestBody CustomerAccount userDetails) {
+        CustomerAccount updatedUser = userService.updateUser(id, userDetails);
         return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }
 

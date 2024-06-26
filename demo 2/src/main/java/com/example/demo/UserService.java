@@ -15,20 +15,20 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<UserAccount> getAllUsers() {
+    public List<CustomerAccount> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public Optional<UserAccount> getUserById(Long id) {
+    public Optional<CustomerAccount> getUserById(Long id) {
         return userRepository.findById(id);
     }
 
-    public UserAccount createUser(UserAccount user) {
+    public CustomerAccount createUser(CustomerAccount user) {
         return userRepository.save(user);
     }
 
-    public UserAccount updateUser(Long id, UserAccount userDetails) {
-        UserAccount user = userRepository.findById(id)
+    public CustomerAccount updateUser(Long id, CustomerAccount userDetails) {
+        CustomerAccount user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
 
         user.setUsername(userDetails.getUsername());
