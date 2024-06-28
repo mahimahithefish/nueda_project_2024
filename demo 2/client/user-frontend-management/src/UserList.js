@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './UserList.css'; // Assuming you create a separate CSS file for styling
+import './UserList.css'; 
 
 const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -11,7 +11,7 @@ const UserList = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/api/accounts'); // Ensure the URL matches your backend endpoint
+            const response = await axios.get('http://localhost:8080/api/accounts'); 
             setUsers(response.data);
         } catch (error) {
             console.error('Error fetching users: ', error);

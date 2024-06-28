@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import UserList from './UserList';
 import AddUser from './AddUser';
-import User from './User'; // New component for user details
+import User from './User'; 
 
 function App() {
     return (
@@ -13,7 +13,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<AddUser />} />
                     <Route path="/users" element={<UserList />} />
-                    <Route path="/users/:id" element={<User />} /> {/* Route for user details */}
+                    <Route path="/users/:id" element={<User />} /> {}
                 </Routes>
             </div>
         </Router>
