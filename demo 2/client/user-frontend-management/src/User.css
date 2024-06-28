@@ -1,0 +1,36 @@
+/* User.css */
+.user-details-container {
+    margin: auto;
+    padding: 40px; /* Increased padding */
+    background-color: #fbf0d3; /* Reverted background color */
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Increased max width */
+    text-align: center;
+}
+
+.user-details-container h2 {
+    font-size: 3rem; /* Increased font size */
+    color: #4d5d89; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 20px; 
+}
+
+.user-details {
+    background-color: #ffffff;
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    border: 2px solid #4d5d89; /* Increased border thickness */
+    text-align: left;
+}
+
+.user-details p {
+    margin: 15px 0; /* Increased margin */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem; /* Increased font size */
+}
+
+.user-details p strong {
+    color: #ff521c;
+}
