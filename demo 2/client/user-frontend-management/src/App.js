@@ -11,7 +11,7 @@ function App() {
             <div className="App">
                 <h1>Customer Management</h1>
                 <Routes>
-                    <Route path="/" element={<AddUser />} />
+                    <Route path="/signup" element={<AddUser />} />
                     <Route path="/users" element={<UserList />} />
                     <Route path="/users/:id" element={<User />} /> {}
                 </Routes>

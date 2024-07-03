@@ -1,0 +1,38 @@
+/* AddUser.css */
+
+.add-user-container {
+    margin: auto;
+    padding: 20px;
+    background-color: #fbf0d3;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.add-user-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-user-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #4d5d89;
+    border-radius: 5px;
+}
+
+.add-user-form button {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ff521c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-user-form button:hover {
+    background-color: #4d5d89;
+}
