@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './UserList.css'; 
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import './UserList.css';
 
 const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -11,7 +12,7 @@ const UserList = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/api/accounts'); 
+            const response = await axios.get('http://localhost:8080/api/accounts');
             setUsers(response.data);
         } catch (error) {
             console.error('Error fetching users: ', error);
@@ -35,7 +36,9 @@ const UserList = () => {
                 <tbody>
                     {users.map(user => (
                         <tr key={user.id}>
-                            <td>{user.id}</td>
+                            <td>
+                                <Link to={`/users/${user.id}`}>{user.id}</Link> {/* Link to the user details page */}
+                            </td>
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>{user.username}</td>
@@ -53,3 +56,4 @@ const UserList = () => {
 };
 
 export default UserList;
+
