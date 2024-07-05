@@ -4,6 +4,7 @@ import './App.css';
 import UserList from './UserList';
 import AddUser from './AddUser';
 import User from './User'; // New component for user details
+import UpdateUser from './UpdateUser';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     <Route path="/" element={<AddUser />} />
                     <Route path="/users" element={<UserList />} />
                     <Route path="/users/:id" element={<User />} /> {/* Route for user details */}
+                    <Route path="/users/update/:id" element={<UpdateUser />} />
                 </Routes>
             </div>
         </Router>

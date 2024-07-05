@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './User.css';
+import { useNavigate } from 'react-router-dom';
 
 const User = () => {
+    const navigate = useNavigate();
     const [user, setUser] = useState(null);
     const { id } = useParams();
 
@@ -32,6 +34,8 @@ const User = () => {
                     <p><strong>Address:</strong> {user.address}</p>
                     <p><strong>Email:</strong> {user.email}</p>
                     <p><strong>Username:</strong> {user.username}</p>
+                    <button className="button" onClick={() => navigate('/users')}>User List</button>
+                    <button className="button" onClick={() => navigate(`/users/update/${user.id}`)}>Edit</button>
                 </div>
             ) : (
                 <p>Loading user details...</p>
