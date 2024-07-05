@@ -55,7 +55,7 @@ const UpdateUser = () => {
                 <div className="user-details">
                     <form onSubmit={handleUpdate}>
                         <input type="Name" placeholder={user.name} value={name} onChange={(e) => setName(e.target.value)} required />
-                        <input type="DOB" placeholder={user.dob} value={dob} onChange={(e) => setDob(e.target.value)} required />
+                        <input type="date" placeholder={user.dob} value={dob} onChange={(e) => setDob(e.target.value)} required />
                         <input type="Username" placeholder={user.username} value={username} onChange={(e) => setUsername(e.target.value)} required />
                         <input type="Password" placeholder={user.password} value={password} onChange={(e) => setPassword(e.target.value)} required />
                         <input type="Email" placeholder={user.email} value={email} onChange={(e) => setEmail(e.target.value)} required />
