@@ -7,7 +7,6 @@ const Home = () => {
     return (
         <div className="home-container">
                 <div className="home-page">
-                    <button className="button" onClick={() => navigate('/users')}>User List</button>
                     <button className="button" onClick={() => navigate('/signup')}>Signup</button>
                 </div>
                 </div>
